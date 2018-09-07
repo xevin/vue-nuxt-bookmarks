@@ -35,6 +35,9 @@ before_script:
   - ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
   - chmod 644 ~/.ssh/known_hosts
 
+  ## Install node
+  - apt install nodejs npm
+
 deploy:
   script:
   - npm i
