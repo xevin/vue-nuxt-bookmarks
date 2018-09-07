@@ -1,4 +1,5 @@
-image: node:8.2.1
+# image: node:8.2.1
+image: ubuntu
 
 before_script:
   ##
