@@ -36,7 +36,7 @@ before_script:
   - chmod 644 ~/.ssh/known_hosts
 
   ## Install node
-  - apt install nodejs npm
+  - apt install -y nodejs npm
 
 deploy:
   script:
