@@ -34,7 +34,8 @@ before_script:
   - ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
   - chmod 644 ~/.ssh/known_hosts
 
-script:
+deploy:
+  script:
   - npm i
   - npm run generate
   - scp -r dist web@xevin.ru:/var/www/web/sites/vue-nuxt-bookmarks
