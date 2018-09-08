@@ -1,7 +1,7 @@
 <template name="booklist-template">
   <div class="book-list">
     <div class="book-list__item book-item" v-for="book in books" :key="book.id">
-      <div class="book-item__cover" :style="{'background-image': 'url(images/' + book.cover + ')' }"></div>
+      <div class="book-item__cover" :style="{'background-image': 'url(/images/' + book.cover + ')' }"></div>
 
       <div class="wrap">
         <div class="book-item__title">{{ book.title }}
@@ -113,6 +113,7 @@ export default {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  justify-content: center;
   margin: -.5em; // уравновешиваем внешние отступы .book-item
 }
 
@@ -134,7 +135,7 @@ export default {
 
   &__title {
     margin-bottom: 1em;
-    font-weight: bold;
+    font-weight: 500;
   }
 
   &__bookmark {

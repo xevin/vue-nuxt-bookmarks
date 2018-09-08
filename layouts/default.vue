@@ -21,23 +21,16 @@ button::-moz-focus-inner {
 
 body,
 .content {
-  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 100;
   background-color: lightblue;
 }
 
-.content,
-nav {
-  padding: 0 1em;
-
-  a {
-    margin-right: .5em;
-    text-decoration: none;
-  }
-
-  & > .nuxt-link-exact-active {
-    transition: border .1s ease;
-    text-decoration: none;
-    border-bottom: 3px solid;
+.content {
+  h1 {
+    text-align: center;
+    margin: 1em;
   }
 }
+
 </style>
