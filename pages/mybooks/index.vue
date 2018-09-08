@@ -6,7 +6,7 @@
 
     <book-list :books="filteredBooks"></book-list>
 
-    <div class="empty" v-if="!filteredBooks.length">
+    <div class="is-center empty" v-if="!filteredBooks.length">
       <em>У вас ещё нет избранных книг</em>
     </div>
   </div>

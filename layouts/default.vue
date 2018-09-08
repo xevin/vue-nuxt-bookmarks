@@ -33,4 +33,8 @@ body,
   }
 }
 
+.is-center {
+  text-align: center;
+}
+
 </style>
