@@ -1,5 +1,13 @@
 # vue-bookmarks
 
+http://books.xevin.ru/
+
+
+Проект на **vue.js**, демонстрирующий работу с сохранением закладок в **localStorage**
+
+Также, в проекте впервые опробованы *nuxt.js* и *gitlab ci/cd*
+
+
 > Nuxt.js project
 
 ## Build Setup
