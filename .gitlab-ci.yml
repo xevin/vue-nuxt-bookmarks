@@ -40,4 +40,6 @@ deploy:
   script:
   - npm i
   - npm run generate
+  - ls -la
+  - chmod 755 dist
   - scp -r dist web@xevin.ru:/var/www/web/sites/vue-nuxt-bookmarks
