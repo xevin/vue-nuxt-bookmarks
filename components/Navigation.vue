@@ -15,6 +15,7 @@
   a {
     margin-right: .5em;
     text-decoration: none;
+    color: white;
   }
 
   & > .nuxt-link-exact-active {

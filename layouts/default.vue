@@ -23,13 +23,14 @@ body,
 .content {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-weight: 100;
-  background-color: lightblue;
+  background-color: #6c5599;
 }
 
 .content {
   h1 {
     text-align: center;
     margin: 1em;
+    color: white;
   }
 }
 

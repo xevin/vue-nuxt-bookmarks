@@ -100,6 +100,7 @@ export default {
 
 <style lang="less">
 @import (reference) "~font-awesome/less/mixins.less";
+@import (reference) "~font-awesome/less/fixed-width.less";
 @import (reference) "~font-awesome/less/variables.less";
 @import (reference) "~font-awesome/less/core.less";
 
@@ -121,10 +122,11 @@ export default {
 .book-item {
   display: flex;
   width: 400px;
-  margin: .5em;
+  margin: 1em;
   border-radius: .3em;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 2px 4pt black;
 
   .wrap {
     padding: .5em;
@@ -139,8 +141,8 @@ export default {
 
   &__bookmark {
     position: absolute;
-    top: .5em;
-    right: .5em;
+    top: .3em;
+    right: .3em;
 
     &:hover {
       cursor: pointer;
@@ -151,13 +153,16 @@ export default {
 
       &:before {
         .fa-icon();
+        .fa-fw();
         content: @fa-var-star;
       }
     }
+
     .not-bookmarked {
 
       &:before {
         .fa-icon();
+        .fa-fw();
         content: @fa-var-star-o;
       }
     }
@@ -169,6 +174,8 @@ export default {
     height: 180px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-color: white;
   }
 }
 </style>
