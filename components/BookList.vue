@@ -122,7 +122,6 @@ export default {
   display: flex;
   width: 400px;
   margin: .5em;
-  border: 1px solid white;
   border-radius: .3em;
   overflow: hidden;
   position: relative;
@@ -168,7 +167,6 @@ export default {
     width: 140px;
     min-width: 140px;
     height: 180px;
-    border: .5em solid @book-cover-border-color;
     background-repeat: no-repeat;
     background-size: cover;
   }

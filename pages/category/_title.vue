@@ -2,8 +2,6 @@
   <div class="content">
     <h1>Жанр «{{ $route.params.title }}»</h1>
 
-    <navigation />
-
     <book-list :books="filteredBooks"></book-list>
   </div>
 </template>
@@ -15,10 +13,16 @@ import Navigation from "~/components/Navigation.vue";
 import BookLibrary from "~/assets/books";
 
 export default {
-  template: "#category-page-template",
   components: {
     BookList,
     Navigation,
+  },
+  validate({ params }) {
+    let books = BookLibrary.books.filter(function(el) {
+      if(el.category == params.title)
+        return true;
+    });
+    return Boolean(books.length);
   },
   data: function() {
     var self = this;
