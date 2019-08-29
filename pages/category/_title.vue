@@ -1,6 +1,7 @@
 <template>
   <div class="content">
-    <h1>Жанр «{{ $route.params.title }}»</h1>
+    <strong class="title text-white is-center is-block">Жанр «{{ $route.params.title }}»</strong>
+    <br>
 
     <book-list :books="filteredBooks"></book-list>
   </div>

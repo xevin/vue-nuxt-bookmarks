@@ -14,7 +14,7 @@ module.exports = {
     ],
   },
   css: [
-    // '~assets/css/main.css',
+    '~assets/css/main.css',
     'font-awesome/css/font-awesome.css',
     // 'vuetify/dist/vuetify.css'
   ],
@@ -41,4 +41,3 @@ module.exports = {
     }
   }
 }
-

@@ -1,0 +1,24 @@
+.page-enter-active, .page-leave-active {
+  transition: opacity .2s;
+}
+
+.page-enter, .page-leave-active {
+  opacity: 0;
+}
+
+
+.text-white {
+  color: white;
+}
+
+.is-block {
+  display: block;
+}
+
+.is-flex {
+  display: flex;
+}
+
+.is-center {
+  text-align: center;
+}

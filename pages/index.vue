@@ -1,9 +1,5 @@
 <template name="category-page-template">
 <div class="content">
-  <h1>Последние поступления книг</h1>
-
-  <navigation />
-
   <book-list :books="filteredBooks"></book-list>
 </div>
 </template>
