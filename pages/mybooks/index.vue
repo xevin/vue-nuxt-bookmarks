@@ -24,25 +24,27 @@ export default {
     BookList,
     Navigation,
   },
-  data: function() {
-
-    let myBooks = '[]';
-    if (process.browser) {
-      myBooks = window.localStorage.getItem("bookmarkedBooks");
-    }
-
-    if (myBooks) {
-      myBooks = JSON.parse(myBooks);
-    }
-
-    var data = {
-      filteredBooks: BookLibrary.books.filter(function(el) {
-        if (myBooks.indexOf(el.id) >= 0)
-          return true;
-      })
+  data() {
+    return {
+      filteredBooks: [],
     };
+  },
+  mounted() {
+    let myBooks = '[]';
 
-    return data
+    if (process.browser) {
+      let bookmarkedBooskInStorage = window.localStorage.getItem("bookmarkedBooks");
+      if (bookmarkedBooskInStorage) {
+        myBooks = bookmarkedBooskInStorage;
+      }
+    }
+
+    myBooks = JSON.parse(myBooks);
+
+    this.filteredBooks = BookLibrary.books.filter(function(el) {
+      if (myBooks.indexOf(el.id) >= 0)
+        return true;
+    })
   }
 }
 </script>
