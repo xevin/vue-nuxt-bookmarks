@@ -1,7 +1,8 @@
 <template>
   <div class="content">
-    <strong class="title text-white is-center is-block">Жанр «{{ $route.params.title }}»</strong>
-    <br>
+    <h1 class="title text-white is-center is-block">
+      Жанр «{{ $route.params.title }}»
+    </h1>
 
     <book-list :books="filteredBooks"></book-list>
   </div>
@@ -11,31 +12,15 @@
 import BookList from "~/components/BookList.vue";
 import Navigation from "~/components/Navigation.vue";
 
-import BookLibrary from "~/assets/books";
-
 export default {
   components: {
     BookList,
     Navigation,
   },
-  validate({ params }) {
-    let books = BookLibrary.books.filter(function(el) {
-      if(el.category == params.title)
-        return true;
-    });
-    return Boolean(books.length);
-  },
-  data: function() {
-    var self = this;
-
-    var data = {
-      filteredBooks: BookLibrary.books.filter(function(el) {
-        if(el.category == self.$route.params.title)
-          return true;
-      })
-    };
-
-    return data
+  computed: {
+    filteredBooks() {
+      return this.$store.state.bookList.filter(({category}) => category === this.$route.params.title)
+    }
   }
 }
 </script>

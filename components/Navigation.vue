@@ -1,7 +1,8 @@
 <template>
   <nav class="main-menu">
     <nuxt-link to="/">Все книги</nuxt-link>
-    <nuxt-link to="/mybooks/">Мои книги</nuxt-link>
+    <nuxt-link to="/favorites/">Мои книги</nuxt-link>
+    <nuxt-link to="/category/">Жанры</nuxt-link>
   </nav>
 </template>
 
