@@ -104,6 +104,7 @@ export default {
   }
 
   &__cover {
+    object-fit: cover;
     width: 140px;
     min-width: 140px;
     height: 180px;
