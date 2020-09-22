@@ -1,31 +1,31 @@
 image: node:10.22.1
 
-before_script:
+#before_script:
   ##
   ## Install ssh-agent if not already installed, it is required by Docker.
   ## (change apt-get to yum if you use an RPM-based image)
   ##
-  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client git -y )'
+  # - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client git -y )'
 
   ##
   ## Run ssh-agent (inside the build environment)
   ##
-  - eval $(ssh-agent -s)
+  # - eval $(ssh-agent -s)
 
   ##
   ## Create the SSH directory and give it the right permissions
   ##
-  - mkdir -p ~/.ssh
-  - chmod 700 ~/.ssh
+  # - mkdir -p ~/.ssh
+  # - chmod 700 ~/.ssh
 
   ##
   ## Use ssh-keyscan to scan the keys of your private server. Replace gitlab.com
   ## with your own domain name. You can copy and repeat that command if you have
   ## more than one server to connect to.
   ##
-  - ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
-  - ssh-keyscan xevin.ru >> ~/.ssh/known_hosts
-  - chmod 644 ~/.ssh/known_hosts
+  # - ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
+  # - ssh-keyscan xevin.ru >> ~/.ssh/known_hosts
+  # - chmod 644 ~/.ssh/known_hosts
 
   ##
   ## Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
@@ -34,16 +34,16 @@ before_script:
   ## https://gitlab.com/gitlab-examples/ssh-private-key/issues/1#note_48526556
   ##
 
-  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' >> ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+  # - echo "$SSH_PRIVATE_KEY" | tr -d '\r' >> ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
 
-deploy:
-  script:
-  - npm i
-  - npm run generate
-  - ls -la
-  - chmod 755 dist
-  - ssh web@xevin.ru 'rm -rf /var/www/web/sites/vue-nuxt-bookmarks'
-  - scp -r dist web@xevin.ru:/var/www/web/sites/vue-nuxt-bookmarks
+#deploy:
+#  script:
+#  - npm i
+#  - npm run generate
+#  - ls -la
+#  - chmod 755 dist
+#  - ssh web@xevin.ru 'rm -rf /var/www/web/sites/vue-nuxt-bookmarks'
+#  - scp -r dist web@xevin.ru:/var/www/web/sites/vue-nuxt-bookmarks
 
 pages:
   stage: deploy
