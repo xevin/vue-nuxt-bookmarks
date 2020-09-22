@@ -1,7 +1,6 @@
 # vue-bookmarks
 
-http://books.xevin.ru/
-
+https://xevin.gitlab.io/vue-nuxt-bookmarks
 
 Проект на **vue.js**, демонстрирующий работу с сохранением закладок в **localStorage**
 

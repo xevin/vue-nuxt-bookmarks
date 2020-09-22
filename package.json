@@ -2,7 +2,7 @@
   "name": "vue-bookmarks",
   "version": "1.0.0",
   "description": "Nuxt.js project",
-  "author": "Stepan Krapivin <xevinbox@yandex.ru>",
+  "author": "Stepan Krapivin <vuejs@xevin.ru>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
