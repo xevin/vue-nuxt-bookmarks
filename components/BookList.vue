@@ -1,8 +1,8 @@
 <template>
   <div class="book-list">
-    <div class="book-list__item" v-for="book in books" :key="book.id">
-      <Book v-bind="book" @bookmark="onBookmark(book.id, $event)"/>
-    </div>
+    <template v-for="book in books">
+      <Book v-bind="book" @bookmark="onBookmark(book.id, $event)" :key="book.id" />
+    </template>
   </div>
 </template>
 
@@ -31,10 +31,20 @@ export default {
 
 <style lang="less">
 .book-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: -.5em; // уравновешиваем внешние отступы .book-item
+  gap: 12px;
+  padding: 0 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  @media (min-width: 640px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 </style>

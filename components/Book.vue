@@ -60,15 +60,13 @@ export default {
 
 .book {
   display: flex;
-  width: 400px;
-  margin: 1em;
   border-radius: .3em;
   overflow: hidden;
   position: relative;
   box-shadow: 0 2px 6px rgba(0, 0, 0, .5);
 
   &__body {
-    padding: .5em;
+    padding: 1rem;
     flex-grow: 1;
     background-color: white;
     display: flex;
@@ -91,8 +89,8 @@ export default {
 
   &__bookmark {
     position: absolute;
-    top: .3em;
-    right: .3em;
+    top: .1rem;
+    right: .3rem;
 
     &:hover {
       cursor: pointer;

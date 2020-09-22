@@ -1,7 +1,5 @@
 <template>
 <div class="content">
-  <h1>Жанры</h1>
-
   <ul class="category-list">
     <li v-for="category in $store.getters.categoryList" :key="category">
       <nuxt-link :to="`/category/${category}`">{{ category }}</nuxt-link>

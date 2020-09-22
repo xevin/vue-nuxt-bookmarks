@@ -22,7 +22,7 @@ export default {
   margin: 0;
 }
 
-::-moz-focus-innerd
+::-moz-focus-inner,
 button::-moz-focus-inner {
   border: 0;
 }
@@ -44,9 +44,4 @@ body,
     color: white;
   }
 }
-
-.is-center {
-  text-align: center;
-}
-
 </style>
