@@ -22,7 +22,7 @@ module.exports = {
   */
   loading: {color: '#3B8070'},
   router: {
-    base: '/vue-nuxt-bookmark/'
+    base: '/vue-nuxt-bookmarks/'
   },
   generate: {
     dir: 'public'
