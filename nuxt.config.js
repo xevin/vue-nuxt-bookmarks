@@ -15,13 +15,15 @@ module.exports = {
   },
   css: [
     '~assets/css/main.css',
-    'font-awesome/css/font-awesome.css',
-    // 'vuetify/dist/vuetify.css'
+    'font-awesome/css/font-awesome.css'
   ],
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  router: {
+    base: '/vue-nuxt-bookmark/'
+  },
   generate: {
     dir: 'public'
   },
