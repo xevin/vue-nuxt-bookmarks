@@ -36,7 +36,7 @@ export default {
   },
   computed: {
     fullPathToCover() {
-      return require(`@/static/images/${this.cover}`)
+      return require(`~/assets/images/${this.cover}`)
     },
     isBookmarked() {
       return this.$store.state.favorites.includes(this.$props.id)
