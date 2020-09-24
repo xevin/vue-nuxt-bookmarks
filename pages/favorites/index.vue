@@ -15,9 +15,12 @@ export default {
   components: {
     BookList,
   },
-  computed: {
-    bookList () {
-      return this.$store.getters.favoriteBookList
+  data() {
+    return {
+      // не используем напрямую значения из стора
+      // Избранные книги должны отображаться после удаления из избранного
+      // чтобы была возможность передумать
+      bookList: [...this.$store.getters.favoriteBookList ]
     }
   }
 }

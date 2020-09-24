@@ -2,7 +2,7 @@
 <div class="content">
   <ul class="category-list">
     <li v-for="category in $store.getters.categoryList" :key="category">
-      <nuxt-link :to="`/category/${category}`">{{ category }}</nuxt-link>
+      <nuxt-link class="button button--gold" :to="`/category/${category}`">{{ category }}</nuxt-link>
     </li>
   </ul>
 </div>
@@ -17,9 +17,10 @@ export default {
 <style scoped>
 .category-list {
   color: white;
-}
-
-.category-list a {
-  color: white;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: .5rem;
+  padding: 0;
 }
 </style>

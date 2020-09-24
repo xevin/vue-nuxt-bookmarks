@@ -60,7 +60,7 @@ export default {
 
 .book {
   display: flex;
-  border-radius: .3em;
+  border-radius: .3rem;
   overflow: hidden;
   position: relative;
   box-shadow: 0 2px 6px rgba(0, 0, 0, .5);

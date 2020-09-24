@@ -17,6 +17,10 @@ export default {
 </script>
 
 <style lang="less">
+@color-1: #6c5599; // purple
+@color-2: gold;
+@color-3: #72c248; // green
+
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
@@ -34,7 +38,7 @@ body,
 .content {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-weight: 100;
-  background-color: #6c5599;
+  background-color: @color-1;
 }
 
 .content {
