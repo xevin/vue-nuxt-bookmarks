@@ -1,8 +1,12 @@
 <template>
   <div>
-    <navigation />
+    <header>
+      <navigation />
+    </header>
 
     <nuxt />
+
+    <footer></footer>
   </div>
 </template>
 
@@ -47,5 +51,10 @@ body,
     margin: 1em;
     color: white;
   }
+}
+
+footer {
+  margin-top: 3rem;
+  //height: 5rem;
 }
 </style>

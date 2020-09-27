@@ -1,6 +1,10 @@
 <template>
   <div class="book">
-    <img class="book__cover" :src="fullPathToCover" :alt="`обложка книги '${title}'`">
+    <img
+      class="book__cover"
+      :src="fullPathToCover"
+      :alt="`обложка книги '${title}'`"
+      :style="coverStyleObject">
 
     <div class="book__body">
       <div class="book__title">{{ title }}</div>
@@ -32,6 +36,7 @@ export default {
     title: String,
     price: Number,
     cover: String,
+    coverColor: String,
     category: String
   },
   computed: {
@@ -45,6 +50,11 @@ export default {
       return this.isBookmarked
         ? "Убрать «" + this.$props.title + "» из избранного"
         : "Добавить «" + this.$props.title + "» в избранное"
+    },
+    coverStyleObject () {
+      return {
+        backgroundColor: this.$props.coverColor ? this.$props.coverColor : 'white'
+      }
     }
   },
   methods: {
@@ -63,7 +73,20 @@ export default {
   border-radius: .3rem;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .5);
+  box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .5);
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: .3rem;
+    pointer-events: none;
+  }
 
   &__body {
     padding: 1rem;
@@ -102,14 +125,10 @@ export default {
   }
 
   &__cover {
-    object-fit: cover;
+    object-fit: contain;
     width: 140px;
     min-width: 140px;
     height: 180px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: white;
   }
 }
 </style>
