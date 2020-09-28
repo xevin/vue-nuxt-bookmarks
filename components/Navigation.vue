@@ -1,9 +1,9 @@
 <template>
   <div class="is-center">
     <nav class="main-menu">
-      <nuxt-link to="/">Все книги</nuxt-link>
-      <nuxt-link to="/favorites/">Мои книги</nuxt-link>
-      <nuxt-link to="/category/">Жанры</nuxt-link>
+      <nuxt-link to="/" tabindex="1">Все книги</nuxt-link>
+      <nuxt-link to="/favorites/" tabindex="2">Мои книги</nuxt-link>
+      <nuxt-link to="/category/" tabindex="3">Жанры</nuxt-link>
     </nav>
   </div>
 </template>
@@ -22,6 +22,10 @@
     color: white;
     border-bottom: 0px solid;
     transition: border .2s ease-in-out;
+
+    &:focus {
+      outline: 2px solid fadeout(gold, 20%);
+    }
   }
 
   & > .nuxt-link-exact-active {
@@ -30,4 +34,5 @@
     border-bottom: 2px solid;
   }
 }
+
 </style>

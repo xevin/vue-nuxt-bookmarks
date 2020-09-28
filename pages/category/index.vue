@@ -2,7 +2,11 @@
 <div class="content">
   <ul class="category-list">
     <li v-for="category in $store.getters.categoryList" :key="category">
-      <nuxt-link class="button button--gold" :to="`/category/${category}`">{{ category }}</nuxt-link>
+      <nuxt-link
+        class="button button--gold"
+        :to="`/category/${category}`"
+        :title="`жанр '${category}'`"
+      >{{ category }}</nuxt-link>
     </li>
   </ul>
 </div>

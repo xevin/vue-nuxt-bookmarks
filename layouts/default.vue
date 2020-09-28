@@ -30,14 +30,6 @@ export default {
   margin: 0;
 }
 
-::-moz-focus-inner,
-button::-moz-focus-inner {
-  border: 0;
-}
-:focus {
-  outline:none !important;
-}
-
 body,
 .content {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;

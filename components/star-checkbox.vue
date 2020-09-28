@@ -1,5 +1,6 @@
 <template>
-  <div
+  <button
+    type="button"
     class="star-checkbox"
     :class="{'star-checkbox--checked': value }"
     @click="onClick"
@@ -18,7 +19,7 @@
         transform="matrix(-.72595 -.7261 .72595 -.7261 -1.505 2.214)"
       />
     </svg>
-  </div>
+  </button>
 </template>
 
 <script>
@@ -38,10 +39,16 @@ export default {
 <style lang="less">
 .star-checkbox {
   display: inline-flex;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 24px;
 
   svg {
     stroke: #555;
     width: 24px;
+    height: 24px;
   }
 
   &--checked {

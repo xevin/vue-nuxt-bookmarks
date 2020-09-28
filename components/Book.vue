@@ -1,5 +1,5 @@
 <template>
-  <div class="book">
+  <div class="book" role="button">
     <img
       class="book__cover"
       :src="fullPathToCover"
@@ -11,6 +11,7 @@
 
       <star-checkbox
         :title="bookmarkTitle"
+        :aria-label="bookmarkTitle"
         class="book__bookmark"
         :value="isBookmarked"
         @input="onBookmark"
@@ -75,7 +76,11 @@ export default {
   position: relative;
   box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .5);
 
-  &::before {
+  &:focus {
+    outline: 2px solid rgba(255,255,255,.5);
+  }
+
+  &::before { // декоративная рамка
     content: '';
     display: block;
     position: absolute;
@@ -99,6 +104,7 @@ export default {
   &__title {
     margin-bottom: 1em;
     font-weight: 600;
+    padding-right: 1rem; // отступ от звезды
   }
 
   &--fav {

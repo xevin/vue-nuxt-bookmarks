@@ -36,4 +36,9 @@
 .button--gold {
   background-color: gold;
   color: #555;
- }
+}
+
+.button--gold:focus {
+  outline: none;
+  box-shadow: 0 0 0 .3rem #ffbf0070;
+}
